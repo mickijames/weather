@@ -1,0 +1,53 @@
+@import 'media-queries';
+
+/********************
+YOUR STYLES
+*******************/
+
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    
+    ul {
+        text-align: center;
+        list-style: none;
+
+        .temp {
+          font-size: 7em;
+        }
+
+        .city {
+          font-size: 1em;
+        }
+
+        .state {
+          font-size: 1em;
+        }
+    }
+    
+    aside {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+
+        figure {
+            background: teal;
+            padding: .5emem;
+            margin: .25em;
+
+
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            
+            figcaption {
+                margin-bottom: .5em;
+            }
+
+            h4 {
+                margin: .25em;
+            }
+        }
+    }
+}
