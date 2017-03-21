@@ -19,7 +19,7 @@ $.simpleWeather({
         }
         
         // Cloudy Weather BG
-        if (weather.code >= 13 && weather.code <= 17 || weather.code >= 20 && weather.code <= 22) {
+        if (weather.code >= 13 && weather.code <= 17 || weather.code >= 20 && weather.code <= 22 || weather.code >= 26 && weather.code <= 29) {
             $('body').addClass('cloudy');
         }
         
@@ -29,8 +29,12 @@ $.simpleWeather({
         }
         
         // Cold Weather BG
-        if (weather.code == 18 || weather.code >= 23 && weather.code <= 25 || weather.code == 35) {
+        if (weather.code == 18 || weather.code == 35) {
             $('body').addClass('cold');
+        } 
+        
+        else {
+            $('body').addClass('home');
         }
         
         // Forecast Day 1
@@ -75,3 +79,11 @@ $.simpleWeather({
     }
  
 });
+
+// call Sidr Plugin. Toggle by Default
+$('#show-sidr').sidr();
+
+// Close from inside
+$('#close').sidr({
+  method: 'close'
+})
