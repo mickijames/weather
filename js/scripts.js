@@ -9,44 +9,64 @@ $.simpleWeather({
 
         // Display Today's Weather
         $('.city').text(weather.city);
+        $('.state').text(weather.region);
         $('.temp').text(weather.temp);
+        $('i').addClass('icon-' + weather.code);
         
-        console.log(weather.code);
-        if (weather.code >=26 && weather.code <= 30) {
-            console.log("inside if statement");
-            // I want to use an icon here but don't know how
+        // Sunny Weather BG
+        if (weather.code == 30 || weather.code == 32 || weather.code == 34 || weather.code == 36 || weather.code == 44) {
+            $('body').addClass('sunny');
         }
         
+        // Cloudy Weather BG
+        if (weather.code >= 13 && weather.code <= 17 || weather.code >= 20 && weather.code <= 22) {
+            $('body').addClass('cloudy');
+        }
+        
+        // Stormy Weather BG
+        if (weather.code >= 1 && weather.code <= 12 || weather.code >= 23 && weather.code <= 24 || weather.code == 35 || weather.code >= 37 && weather.code <= 43 || weather.code >= 45) {
+            $('body').addClass('stormy');
+        }
+        
+        // Cold Weather BG
+        if (weather.code == 18 || weather.code >= 23 && weather.code <= 25 || weather.code == 35) {
+            $('body').addClass('cold');
+        }
         
         // Forecast Day 1
-        $('aside figure:nth-child(1) h2').text(weather.forecast[0].day);
-        $('aside figure:nth-child(1) img').attr('src', weather.forecast[0].image);
-        $('aside figure:nth-child(1) figcaption').text(weather.forecast[0].text);
-        $('aside figure:nth-child(1) .high').text(weather.forecast[0].high);
+        $('section figure:nth-child(1) h2').text(weather.forecast[0].day);
+        $('section figure:nth-child(1) i').addClass('icon-' + weather.forecast[0].code);
+        $('section figure:nth-child(1) figcaption').text(weather.forecast[0].text);
+        $('section figure:nth-child(1) .high').text(weather.forecast[0].high);
+        $('section figure:nth-child(1) .low').text(weather.forecast[0].low);
 
         // Forecast Day 2
-        $('aside figure:nth-child(2) h2').text(weather.forecast[1].day);
-        $('aside figure:nth-child(2) img').attr('src', weather.forecast[1].image);
-        $('aside figure:nth-child(2) figcaption').text(weather.forecast[1].text);
-        $('aside figure:nth-child(2) .high').text(weather.forecast[1].high);
+        $('section figure:nth-child(2) h2').text(weather.forecast[1].day);
+        $('section figure:nth-child(2) i').addClass('icon-' + weather.forecast[1].code);
+        $('section figure:nth-child(2) figcaption').text(weather.forecast[1].text);
+        $('section figure:nth-child(2) .high').text(weather.forecast[1].high);
+        $('section figure:nth-child(2) .low').text(weather.forecast[1].low);
 
         // Forecast Day 3
-        $('aside figure:nth-child(3) h2').text(weather.forecast[2].day);
-        $('aside figure:nth-child(3) img').attr('src', weather.forecast[2].image);
-        $('aside figure:nth-child(3) figcaption').text(weather.forecast[2].text);
-        $('aside figure:nth-child(3) .high').text(weather.forecast[2].high);
+        $('section figure:nth-child(3) h2').text(weather.forecast[2].day);
+        $('section figure:nth-child(3) i').addClass('icon-' + weather.forecast[2].code);
+        $('section figure:nth-child(3) figcaption').text(weather.forecast[2].text);
+        $('section figure:nth-child(3) .high').text(weather.forecast[2].high);
+        $('section figure:nth-child(3) .low').text(weather.forecast[2].low);
 
         // Forecast Day 4
-        $('aside figure:nth-child(4) h2').text(weather.forecast[3].day);
-        $('aside figure:nth-child(4) img').attr('src', weather.forecast[3].image);
-        $('aside figure:nth-child(4) figcaption').text(weather.forecast[3].text);
-        $('aside figure:nth-child(4) .high').text(weather.forecast[3].high);
+        $('section figure:nth-child(4) h2').text(weather.forecast[3].day);
+        $('section figure:nth-child(4) i').addClass('icon-' + weather.forecast[3].code);
+        $('section figure:nth-child(4) figcaption').text(weather.forecast[3].text);
+        $('section figure:nth-child(4) .high').text(weather.forecast[3].high);
+        $('section figure:nth-child(4) .low').text(weather.forecast[3].low);
 
         // Forecast Day 5
-        $('aside figure:nth-child(5) h2').text(weather.forecast[4].day);
-        $('aside figure:nth-child(5) img').attr('src', weather.forecast[4].image);
-        $('aside figure:nth-child(5) figcaption').text(weather.forecast[4].text);
-        $('aside figure:nth-child(5) .high').text(weather.forecast[4].high);
+        $('section figure:nth-child(5) h2').text(weather.forecast[4].day);
+        $('section figure:nth-child(5) i').addClass('icon-' + weather.forecast[4].code);
+        $('section figure:nth-child(5) figcaption').text(weather.forecast[4].text);
+        $('section figure:nth-child(5) .high').text(weather.forecast[4].high);
+        $('section figure:nth-child(5) .low').text(weather.forecast[4].low);
       
     },
     error: function(error) {
