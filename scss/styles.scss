@@ -12,6 +12,10 @@ body {
     flex-flow: column;
     align-items: center;
 
+    h1 {
+        color: #9a0303;
+    }
+    
     .temp {
         font-size: 5em;
         margin: .5em 0 0;

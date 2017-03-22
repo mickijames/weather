@@ -2,20 +2,21 @@
     font-family: 'weather';
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16425/artill_clean_icons-webfont.eot');
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16425/artill_clean_icons-webfont.eot#iefix') format('embedded-opentype'),
-         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16425/artill_clean_icons-webfont.woff') format('woff'),
-         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16425/artill_clean_icons-webfont.ttf') format('truetype'),
-         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16425/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16425/artill_clean_icons-webfont.woff') format('woff'),
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16425/artill_clean_icons-webfont.ttf') format('truetype'),
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16425/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 i {
-  font-family: weather;
-  font-size: 3em;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.0;
-  text-transform: none;
+    color: #9a0303;
+    font-family: weather;
+    font-size: 3em;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.0;
+    text-transform: none;
 }
 
 .icon-0:before { content: ":"; }
@@ -66,5 +67,3 @@ i {
 .icon-45:before { content: "S"; }
 .icon-46:before { content: "U"; }
 .icon-47:before { content: "S"; }
-
-
