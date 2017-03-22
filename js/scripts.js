@@ -26,16 +26,19 @@ if ('geolocation' in navigator) {
 
 }
 
+$('.homepage').click(function() {
+    $('#homepage').show();
+});
+
 $('.cheney').click( function() {
-    
     $('#homepage').hide();
-    getWeather('Cheney, WA');
+    getWeather('Cheney,WA');
+//    $('.cheney').show();
 
 });
 
-// Add Location
-//$('.newlocal').click( function () {
-//    $('aside').add('<input type="text">');
+//$('body').ready(function () {
+//    console.log('inside onready function');
 //});
 
 var getWeather = function (location) {
