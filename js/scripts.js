@@ -16,6 +16,7 @@ if ('geolocation' in navigator) {
             var long = position.coords.longitude;
 
             console.log(lat, long);
+            $('#homepage').hide();
 
             // Send to SimpleWeather
             getWeather( lat + ',' + long ); 
@@ -23,15 +24,19 @@ if ('geolocation' in navigator) {
 
 });
 
-} else {
-  
 }
 
 $('.cheney').click( function() {
-      
+    
+    $('#homepage').hide();
     getWeather('Cheney, WA');
 
 });
+
+// Add Location
+//$('.newlocal').click( function () {
+//    $('aside').add('<input type="text">');
+//});
 
 var getWeather = function (location) {
     $.simpleWeather({
@@ -129,10 +134,7 @@ var background = function (weather) {
     // Cold Weather BG
     if (weather.code == 18 || weather.code == 35) {
         $('body').addClass('cold');
-    } 
-
-    else {
-        $('body').addClass('home');
+        $('body').removeClass('home');
     }
 };
 

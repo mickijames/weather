@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
 
   <title>Weather</title>
  
@@ -13,18 +14,28 @@
   <link rel="stylesheet" href="css/styles.css">	
 	
 </head>
-<body>
+<body class="home">
 	
     <!-- YOUR AWESOME WEBSITE -->
     <a id="show-sidr" href="#sidr">&#9776;</a>
     <aside id="sidr">
         
+        <a href="#homepage">Home</a>
         <a href="#geo" class="geo">Your Location</a>
         <a href="#cheney" class="cheney">Cheney</a>
+        <a href="#newlocal" class="newlocal">Add New Location</a>
 
         <a href="#sidr" id="close">Close</a>
 
     </aside>
+    
+    <div id="homepage">
+        <h1>What in the world is the weather?</h1>
+    </div>
+    
+    <div id="newlocal">
+        <input type="text">
+    </div>
     
     <div id="geo">
         <h1><span class='temp'>00</span> &#x2109;</h1>
