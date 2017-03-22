@@ -68,6 +68,13 @@ body {
         
         a {
             color: #fff;
+            display: block;
+            padding: .25em 0;
+        }
+        
+        #close {
+            position: relative;
+            bottom: 0;
         }
     }
     

@@ -13,29 +13,7 @@ $.simpleWeather({
         $('.temp').text(weather.temp);
         $('i').addClass('icon-' + weather.code);
         
-        // Sunny Weather BG
-        if (weather.code == 30 || weather.code == 32 || weather.code == 34 || weather.code == 36 || weather.code == 44) {
-            $('body').addClass('sunny');
-        }
-        
-        // Cloudy Weather BG
-        if (weather.code >= 13 && weather.code <= 17 || weather.code >= 20 && weather.code <= 22 || weather.code >= 26 && weather.code <= 29) {
-            $('body').addClass('cloudy');
-        }
-        
-        // Stormy Weather BG
-        if (weather.code >= 1 && weather.code <= 12 || weather.code >= 23 && weather.code <= 24 || weather.code == 35 || weather.code >= 37 && weather.code <= 43 || weather.code >= 45) {
-            $('body').addClass('stormy');
-        }
-        
-        // Cold Weather BG
-        if (weather.code == 18 || weather.code == 35) {
-            $('body').addClass('cold');
-        } 
-        
-        else {
-            $('body').addClass('home');
-        }
+        background(weather);
         
         // Forecast Day 1
         $('section figure:nth-child(1) h2').text(weather.forecast[0].day);
@@ -73,12 +51,38 @@ $.simpleWeather({
         $('section figure:nth-child(5) .low').text(weather.forecast[4].low);
       
     },
-    error: function(error) {
+    error: function (error) {
       // Show if weather cannot be retreived
       console.log('Go Look Outside');
     }
  
 });
+
+var background = function (weather) {
+    // Sunny Weather BG
+    if (weather.code == 30 || weather.code == 32 || weather.code == 34 || weather.code == 36 || weather.code == 44) {
+        $('body').addClass('sunny');
+    }
+
+    // Cloudy Weather BG
+    if (weather.code >= 13 && weather.code <= 17 || weather.code >= 20 && weather.code <= 22 || weather.code >= 26 && weather.code <= 29) {
+        $('body').addClass('cloudy');
+    }
+
+    // Stormy Weather BG
+    if (weather.code >= 1 && weather.code <= 12 || weather.code >= 23 && weather.code <= 24 || weather.code == 35 || weather.code >= 37 && weather.code <= 43 || weather.code >= 45) {
+        $('body').addClass('stormy');
+    }
+
+    // Cold Weather BG
+    if (weather.code == 18 || weather.code == 35) {
+        $('body').addClass('cold');
+    } 
+
+    else {
+        $('body').addClass('home');
+    }
+};
 
 // call Sidr Plugin. Toggle by Default
 $('#show-sidr').sidr();
