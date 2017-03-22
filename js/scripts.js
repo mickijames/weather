@@ -1,32 +1,62 @@
 // http://simpleweatherjs.com/
 
-$.simpleWeather({
-    location: 'Cheney, WA',
-    unit: 'f',
-    success: function(weather) {
-        // Entire weather object
-        console.log(weather);
+// Get and store Geo Location lat/long coordinates
 
-        displayWeather(weather);
-        
-        background(weather);
-        
-        forecast(weather);
+if ('geolocation' in navigator) {
+
+   
+    
+    $('.geo').click( function() {
       
-    },
-    error: function (error) {
-      // Show if weather cannot be retreived
-      console.log('Go Look Outside');
-    }
- 
+        //load weather using your lat/long coordinates
+        navigator.geolocation.getCurrentPosition(function(position) {
+
+            // Check lat/long coordinates
+            var lat = position.coords.latitude;
+            var long = position.coords.longitude;
+
+            console.log(lat, long);
+
+            // Send to SimpleWeather
+            getWeather( lat + ',' + long ); 
+        });
+
 });
 
-var displayWeather = function (weather) {
-    // Display Today's Weather
-    $('.city').text(weather.city);
-    $('.state').text(weather.region);
-    $('.temp').text(weather.temp);
-    $('i').addClass('icon-' + weather.code);
+} else {
+  
+}
+
+$('.cheney').click( function() {
+      
+    getWeather('Cheney, WA');
+
+});
+
+var getWeather = function (location) {
+    $.simpleWeather({
+        location: location,
+        unit: 'f',
+        success: function(weather) {
+            // Entire weather object
+            console.log(weather);
+
+            // Display Today's Weather
+            $('.city').text(weather.city);
+            $('.state').text(weather.region);
+            $('.temp').text(weather.temp);
+            $('i').addClass('icon-' + weather.code);
+
+            background(weather);
+            forecast(weather);
+
+        },
+        error: function (error) {
+          // Show if weather cannot be retreived
+          console.log('Go Look Outside');
+        }
+
+    });
 };
 
 var forecast = function (weather) {

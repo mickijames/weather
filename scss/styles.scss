@@ -11,6 +11,27 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
+    
+    div {
+        display: none;
+        
+        position: absolute;
+        width: 100%;
+    }
+
+    #geo {
+        margin: 1em;
+    }
+    #cheney {
+        margin: 1em;
+    }
+
+    :target {
+        z-index: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
 
     h1 {
         color: #9a0303;
