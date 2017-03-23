@@ -60,10 +60,15 @@ body {
             font-size: 1em;
         }
         
-        a {
+        a,
+        .location {
             color: #fff;
             display: block;
             padding: .25em 0;
+        }
+        
+        .location {
+            display: none;
         }
         
         #close {

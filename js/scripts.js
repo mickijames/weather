@@ -19,6 +19,9 @@ if ('geolocation' in navigator) {
             getWeather( lat + ',' + long ); 
         });
     });
+} else {
+    $('.geo').hide();
+    $('.location').show();
 }
 
 $('.homepage').click(function() {
@@ -140,31 +143,37 @@ var background = function (weather) {
 
     // Cloudy/Snowy Weather BG
     if (weather.code >= 13 && weather.code <= 17 || weather.code >= 20 && weather.code <= 22 || weather.code == 26 || weather.code == 28) {
+        $('body').removeClass();
         $('body').addClass('cloudy');
     }
     
     // Partly Cloudy
     if (weather.code == 30 || weather.code >= 23 && weather.code <= 24) {
+        $('body').removeClass();
         $('body').addClass('partlycloudy');
     }
     
     // Stormy Weather BG
     if (weather.code >= 1 && weather.code <= 12 || weather.code == 35 || weather.code >= 37 && weather.code <= 43 || weather.code >= 45) {
+        $('body').removeClass();
         $('body').addClass('stormy');
     }
 
     // Cold Weather BG
     if (weather.code == 18 || weather.code == 35) {
+        $('body').removeClass();
         $('body').addClass('cold');
     }
     
     // Night time
     if (weather.code == 27 || weather.code == 29 || weather.code == 31 || weather.code == 33) {
+        $('body').removeClass();
         $('body').addClass('night');
     }
     
     // Tornado
     if (weather.code == 0) {
+        $('body').removeClass();
         $('body').addClass('tornado');
         $('div').hide();
         $('#tornado').show();
