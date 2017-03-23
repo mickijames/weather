@@ -1,6 +1,8 @@
 @import 'artill-font-icons';
 @import 'sidr-styling';
 @import 'bg-gradients';
+@import 'figure';
+@import 'div';
 @import 'media-queries';
 
 /********************
@@ -21,50 +23,16 @@ body {
         
         i {
             position: absolute;
-            top: -.2em;
+            top: .15em;
             font-size: 10em;
             right: -1.25em;
             color: #fff;
         }
     }
     
-    div {
-        display: none;
-        
-        position: relative;
-        width: 100%;
-    }
-    
-    #homepage {
-        display: block;
-        text-align: center;
-    }
-
-    #geo {
-        margin: 1em;
-    }
-    
-    #cheney {
-        margin: 1em;
-    }
-    
-    #tornado {
-        h1 {
-            color: #fff;
-            font-size: 12em;
-            text-align: center;
-        }
-    }
-
-    :target {
-        z-index: 1;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-    }
-    
     h1 {
         color: #9a0303;
+        margin: 2em 0 0;
     }
     
     .temp {
@@ -76,40 +44,6 @@ body {
     p {
         font-size: 1.25em;
         margin: 0 0 1em;
-    }
-    
-    section {
-        display: flex;
-        flex-flow: wrap;
-        justify-content: center;
-
-        figure {
-            padding: .5em;
-            margin: .25em;
-            width: 10em;
-
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            
-            h2 {
-                margin: .5em 0;
-            }
-            
-            i {
-                font-size: 7em;
-                margin: 0;
-            }
-            
-            figcaption {
-                font-size: .8em;
-                margin: .5em;
-            }
-
-            h4 {
-                margin: .25em;
-            }
-        }
     }
     
     aside {
@@ -131,12 +65,5 @@ body {
             margin-top: 2em;
             font-size: .75em;
         }
-    }
-    
-    #show-sidr {
-        color: #9a0303;
-        position: absolute;
-        top: 0;
-        left: 0;
     }
 }

@@ -1,0 +1,34 @@
+div {
+    display: none;
+
+    position: relative;
+    width: 100%;
+}
+
+#homepage {
+    display: block;
+    text-align: center;
+}
+
+#geo {
+    margin: 1em;
+}
+
+#cheney {
+    margin: 1em;
+}
+
+#tornado {
+    h1 {
+        color: #fff;
+        font-size: 12em;
+        text-align: center;
+    }
+}
+
+:target {
+    z-index: 1;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
