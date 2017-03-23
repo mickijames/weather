@@ -16,7 +16,8 @@ if ('geolocation' in navigator) {
             $('#homepage').hide();
 
             // Send to SimpleWeather
-            getWeather( lat + ',' + long ); 
+            getWeather( lat + ',' + long );
+            $('#close').trigger('click'); 
         });
     });
 } else {

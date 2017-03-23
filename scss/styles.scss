@@ -18,26 +18,24 @@ body {
         text-decoration: none;
     }
     
+    #show-sidr {
+        padding: 0 1em 1em 0;
+    }
+    
     .icon {
         position: relative;
         
         i {
             position: absolute;
-            top: .15em;
+            top: -.15em;
             font-size: 10em;
-            right: -1.25em;
+            right: -1.35em;
             color: #fff;
         }
     }
     
-    #homepage h1 {
-        font-size: 4em;
-        padding: 2em;
-    }
-    
     h1 {
         color: #9a0303;
-        margin: 2em 0 0;
     }
     
     .temp {
@@ -49,6 +47,7 @@ body {
     p {
         font-size: 1.25em;
         margin: 0 0 1em;
+        text-align: center;
     }
     
     aside {

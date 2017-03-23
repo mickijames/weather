@@ -1,33 +1,35 @@
 section {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    
+    padding: 2.5em 1em;
+
+    figure {
+        padding: 1.5em .5em;
+        margin: .25em;
+        width: 10em;
+
         display: flex;
-        flex-flow: wrap;
-        justify-content: center;
+        flex-flow: column;
+        align-items: center;
 
-        figure {
-            padding: .5em;
+        h2 {
+            margin: .5em 0;
+        }
+
+        i {
+            font-size: 7em;
+            margin: 0;
+        }
+
+        figcaption {
+            font-size: .8em;
+            margin: .5em;
+        }
+
+        h4 {
             margin: .25em;
-            width: 10em;
-
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            
-            h2 {
-                margin: .5em 0;
-            }
-            
-            i {
-                font-size: 7em;
-                margin: 0;
-            }
-            
-            figcaption {
-                font-size: .8em;
-                margin: .5em;
-            }
-
-            h4 {
-                margin: .25em;
-            }
         }
     }
+}
