@@ -1,11 +1,8 @@
 // http://simpleweatherjs.com/
 
+// Click functions
 // Get and store Geo Location lat/long coordinates
-
 if ('geolocation' in navigator) {
-
-   
-    
     $('.geo').click( function() {
       
         //load weather using your lat/long coordinates
@@ -21,9 +18,7 @@ if ('geolocation' in navigator) {
             // Send to SimpleWeather
             getWeather( lat + ',' + long ); 
         });
-
-});
-
+    });
 }
 
 $('.homepage').click(function() {
@@ -32,14 +27,24 @@ $('.homepage').click(function() {
 
 $('.cheney').click( function() {
     $('#homepage').hide();
-    getWeather('Cheney,WA');
-//    $('.cheney').show();
-
+    getWeather('Cheney, WA');
 });
 
-//$('body').ready(function () {
-//    console.log('inside onready function');
-//});
+$('.mabton').click( function() {
+    $('#homepage').hide();
+    getWeather('Mabton, WA');
+});
+
+$('.seattle').click( function() {
+    $('#homepage').hide();
+    getWeather('Seattle, WA');
+});
+
+$('.portland').click( function() {
+    $('#homepage').hide();
+    getWeather('Portland, OR');
+});
+   
 
 var getWeather = function (location) {
     $.simpleWeather({
@@ -124,8 +129,8 @@ var background = function (weather) {
         $('body').addClass('sunny');
     }
 
-    // Cloudy Weather BG
-    if (weather.code >= 13 && weather.code <= 17 || weather.code >= 20 && weather.code <= 22 || weather.code >= 26 && weather.code <= 29) {
+    // Cloudy/Snowy Weather BG
+    if (weather.code >= 13 && weather.code <= 17 || weather.code >= 20 && weather.code <= 22 || weather.code == 26 || weather.code == 28) {
         $('body').addClass('cloudy');
     }
 
@@ -137,7 +142,18 @@ var background = function (weather) {
     // Cold Weather BG
     if (weather.code == 18 || weather.code == 35) {
         $('body').addClass('cold');
-        $('body').removeClass('home');
+    }
+    
+    // Night time
+    if (weather.code == 27 || weather.code == 29 || weather.code == 31 || weather.code == 33) {
+        $('body').addClass('night');
+    }
+    
+    // Tornado
+    if (weather.code == 0) {
+        $('body').addClass('tornado');
+        $('div').hide();
+        $('#tornado').show();
     }
 };
 
@@ -148,3 +164,15 @@ $('#show-sidr').sidr();
 $('#close').sidr({
   method: 'close'
 })
+
+$('body').swipe( {
+        //Single swipe handler for left swipes
+        swipeLeft: function () {
+            $.sidr('close', 'sidr-main');
+        },
+        swipeRight: function () {
+            $.sidr('open', 'sidr-main');
+        },
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        threshold: 45
+});
