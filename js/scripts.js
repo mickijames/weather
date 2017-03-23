@@ -1,64 +1,6 @@
 // http://simpleweatherjs.com/
 
-// Click functions
-// Get and store Geo Location lat/long coordinates
-if ('geolocation' in navigator) {
-    $('.geo').click( function() {
-      
-        //load weather using your lat/long coordinates
-        navigator.geolocation.getCurrentPosition(function(position) {
-
-            // Check lat/long coordinates
-            var lat = position.coords.latitude;
-            var long = position.coords.longitude;
-
-            console.log(lat, long);
-            $('#homepage').hide();
-
-            // Send to SimpleWeather
-            getWeather( lat + ',' + long );
-            $('#close').trigger('click'); 
-        });
-    });
-} else {
-    $('.geo').hide();
-    $('.location').show();
-}
-
-$('.homepage').click(function() {
-    $('#homepage').show();
-    $('#close').trigger('click');
-});
-
-$('.cheney').click( function() {
-    $('#homepage').hide();
-    $('i').removeClass();
-    getWeather('Cheney, WA');
-    $('#close').trigger('click');
-});
-
-$('.mabton').click( function() {
-    $('#homepage').hide();
-    $('i').removeClass();
-    getWeather('Mabton, WA');
-    $('#close').trigger('click');
-});
-
-$('.seattle').click( function() {
-    $('#homepage').hide();
-    $('i').removeClass();
-    getWeather('Seattle, WA');
-    $('#close').trigger('click');
-});
-
-$('.portland').click( function() {
-    $('#homepage').hide();
-    $('i').removeClass();
-    getWeather('Portland, OR');
-    $('#close').trigger('click');
-});
-   
-
+// Function Definitions
 var getWeather = function (location) {
     $.simpleWeather({
         location: location,
@@ -188,6 +130,71 @@ var background = function (weather) {
     }
 };
 
+
+// Click Function Calls
+// Get and store Geo Location lat/long coordinates
+if ('geolocation' in navigator) {
+    $('.geo').click( function() {
+      
+        //load weather using your lat/long coordinates
+        navigator.geolocation.getCurrentPosition(function(position) {
+
+            // Check lat/long coordinates
+            var lat = position.coords.latitude;
+            var long = position.coords.longitude;
+
+            console.log(lat, long);
+            $('#homepage').hide();
+
+            // Send to SimpleWeather
+            getWeather( lat + ',' + long );
+            $('#close').trigger('click'); 
+        });
+    });
+} else {
+    $('.geo').hide();
+    $('.location').show();
+}
+
+$('.homepage').click(function() {
+    $('#homepage').show();
+    $('#close').trigger('click');
+});
+
+$('.cheney').click( function() {
+    $('#homepage').hide();
+    $('i').removeClass();
+    getWeather('Cheney, WA');
+    $('#close').trigger('click');
+});
+
+$('.mabton').click( function() {
+    $('#homepage').hide();
+    $('i').removeClass();
+    getWeather('Mabton, WA');
+    $('#close').trigger('click');
+});
+
+$('.seattle').click( function() {
+    $('#homepage').hide();
+    $('i').removeClass();
+    getWeather('Seattle, WA');
+    $('#close').trigger('click');
+});
+
+$('.portland').click( function() {
+    $('#homepage').hide();
+    $('i').removeClass();
+    getWeather('Portland, OR');
+    $('#close').trigger('click');
+});
+
+// Button
+$('button').click(function () {
+    $('button').hide();
+    $('section').show();
+});
+   
 // call Sidr Plugin. Toggle by Default
 $('#show-sidr').sidr();
 

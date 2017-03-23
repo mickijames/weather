@@ -23,6 +23,10 @@ MEDIA QUERIES
                 flex-flow: column;
                 align-items: center;
                 margin: 2em 5em 0 -3em;
+                
+                .displayforecast {
+                    display: none;
+                }
             }
         }
         
@@ -58,8 +62,14 @@ MEDIA QUERIES
         align-items: center;
         margin-top: 2em;
         
-        div.temperature {
-            margin: 2em 0 0 0;
+        div {
+            .temperature {
+                margin: 2em 0 0 0;
+            }
+            
+            button {
+                display: block;
+            }
         }
     }
 

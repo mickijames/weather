@@ -50,6 +50,16 @@ body {
         text-align: center;
     }
     
+    button {
+        padding: .5em;
+        border-radius: 5px;
+        background: #fff;
+        border: none;
+
+        position: relative;
+        top: 5em;
+    }
+    
     aside {
         box-sizing: border-box;
         padding: 1em;
