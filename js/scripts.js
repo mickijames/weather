@@ -23,26 +23,35 @@ if ('geolocation' in navigator) {
 
 $('.homepage').click(function() {
     $('#homepage').show();
+    $('#close').trigger('click');
 });
 
 $('.cheney').click( function() {
     $('#homepage').hide();
+    $('i').removeClass();
     getWeather('Cheney, WA');
+    $('#close').trigger('click');
 });
 
 $('.mabton').click( function() {
     $('#homepage').hide();
+    $('i').removeClass();
     getWeather('Mabton, WA');
+    $('#close').trigger('click');
 });
 
 $('.seattle').click( function() {
     $('#homepage').hide();
+    $('i').removeClass();
     getWeather('Seattle, WA');
+    $('#close').trigger('click');
 });
 
 $('.portland').click( function() {
     $('#homepage').hide();
+    $('i').removeClass();
     getWeather('Portland, OR');
+    $('#close').trigger('click');
 });
    
 
