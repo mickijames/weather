@@ -15,6 +15,12 @@
     background-attachment:fixed;
 }
 
+.partlycloudy {
+    background: #968c72; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #968c72 , rgba(248, 181, 0, 0.73)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #968c72 , rgba(248, 181, 0, 0.73)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .cloudy {
     background: -moz-linear-gradient(left, rgba(190,194,198,0.33) 0%, rgba(174,180,185,0.33) 18%, rgba(130,140,149,0.75) 69%, rgba(118,134,148,0.91) 89%, rgba(112,131,147,0.91) 100%);
     background: -webkit-linear-gradient(left, rgba(190,194,198,0.33) 0%,rgba(174,180,185,0.33) 18%,rgba(130,140,149,0.75) 69%,rgba(118,134,148,0.91) 89%,rgba(112,131,147,0.91) 100%);
@@ -53,6 +59,8 @@
     
     background-size:cover;
     background-attachment:fixed;
+    
+    color: #fff;
 }
 
 .tornado {

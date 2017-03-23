@@ -142,9 +142,14 @@ var background = function (weather) {
     if (weather.code >= 13 && weather.code <= 17 || weather.code >= 20 && weather.code <= 22 || weather.code == 26 || weather.code == 28) {
         $('body').addClass('cloudy');
     }
-
+    
+    // Partly Cloudy
+    if (weather.code == 30 || weather.code >= 23 && weather.code <= 24) {
+        $('body').addClass('partlycloudy');
+    }
+    
     // Stormy Weather BG
-    if (weather.code >= 1 && weather.code <= 12 || weather.code >= 23 && weather.code <= 24 || weather.code == 35 || weather.code >= 37 && weather.code <= 43 || weather.code >= 45) {
+    if (weather.code >= 1 && weather.code <= 12 || weather.code == 35 || weather.code >= 37 && weather.code <= 43 || weather.code >= 45) {
         $('body').addClass('stormy');
     }
 
