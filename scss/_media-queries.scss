@@ -44,6 +44,11 @@ MEDIA QUERIES
             font-size: 4em;
             padding: 1em .5em;
         }
+        
+        #tornado h1 {
+            font-size: 3.5em;
+            margin: 3.75em 0;
+        }
     }
     
     section {
@@ -91,6 +96,11 @@ MEDIA QUERIES
             }
 
         }
+        
+        #tornado h1 {
+            font-size: 5em;
+            margin: 2.5em 0;
+        }
     }
     
     #homepage h1 {
@@ -118,5 +128,10 @@ MEDIA QUERIES
 
 /* Desktop: 1280px = 80em */
 @media screen and (min-width: 80em) { 
-
+    body {
+        #tornado h1 {
+            font-size: 6em;
+            margin: 2em 0;
+        }
+    }
 }

@@ -10,6 +10,8 @@
 YOUR STYLES
 *******************/
 
+$fontcolor: #fff;
+
 body {
     display: flex;
     flex-flow: column;
@@ -31,7 +33,7 @@ body {
             top: 0em;
             font-size: 5em;
             right: -2em;
-            color: #fff;
+            color: $fontcolor;
         }
     }
     
@@ -46,6 +48,7 @@ body {
     }
 
     p {
+        color: $fontcolor;
         font-size: 1.25em;
         margin: 0 0 1em;
         text-align: center;
@@ -54,7 +57,7 @@ body {
     button {
         padding: .5em;
         border-radius: 5px;
-        background: #fff;
+        background: $fontcolor;
         border: none;
 
         position: relative;
@@ -66,13 +69,13 @@ body {
         padding: 1em;
         
         p {
-            color: #000;
+            color: $fontcolor;
             font-size: 1em;
         }
         
         a,
         .location {
-            color: #fff;
+            color: $fontcolor;
             display: block;
             padding: .25em 0;
         }

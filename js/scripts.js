@@ -107,6 +107,8 @@ var background = function (weather) {
     if (weather.code == 18 || weather.code == 35) {
         $('body').removeClass();
         $('body').addClass('cold');
+        $('h2').addClass('coldweatherfontcolor');
+        $('figcaption').addClass('coldweatherfontcolor');
     }
     
     // Night time

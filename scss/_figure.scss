@@ -1,3 +1,5 @@
+$fontcolor: #fff;
+
 figure {
         width: 6em;
         height: 6em;
@@ -15,10 +17,16 @@ figure {
         }
 
         h2 {
+            color: $fontcolor;
             margin: .5em 0 .25em;
         }
 
         figcaption {
+            color: $fontcolor;
             margin: .25em 0;
+        }
+    
+        .coldweatherfontcolor {
+            color: #000;
         }
     }
