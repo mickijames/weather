@@ -192,6 +192,7 @@ $('.portland').click( function() {
 // Button
 $('button').click(function () {
     $('button').hide();
+    $('section').addClass('showforecast');
     $('section').show();
 });
    

@@ -22,7 +22,7 @@ MEDIA QUERIES
                 display: flex;
                 flex-flow: column;
                 align-items: center;
-                margin: 2em 5em 0 -3em;
+                margin: 2em 2em 0em -.5em;
                 
                 .displayforecast {
                     display: none;
@@ -30,11 +30,15 @@ MEDIA QUERIES
             }
         }
         
+        figure i {
+            font-size: 3em;
+        }
+        
         #show-sidr {
             font-size: 2em;
         }
         
-        #sidr {
+        #sidr a {
             font-size: 2em;
         }
         
@@ -44,6 +48,18 @@ MEDIA QUERIES
         }
     }
     
+    section {
+        display: none;
+    }
+    
+    .showforecast {
+        display: flex;
+        flex-flow: row wrap;
+        font-size: 1.25em;
+        margin: 4em auto;
+        padding: 1em;
+        width: 20em;
+    }
   
 }
 
@@ -56,21 +72,76 @@ MEDIA QUERIES
        content: "Tablet Size";
   }
     
-    body main {
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        margin-top: 2em;
+    body {
         
-        div {
-            .temperature {
-                margin: 2em 0 0 0;
+        #sidr a {
+            font-size: 1.25em;
+        }
+        
+        main {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            margin-top: 2em;
+
+            div {
+                .temperature {
+                    margin: 2em 0 0 0;
+                }
+
+                button {
+                    display: block;
+                }
             }
-            
-            button {
-                display: block;
+
+        }
+    }
+    
+    figure i {
+        font-size: 4em;
+    }
+    
+    .showforecast {
+        display: none;
+    }
+    
+    section {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        
+        padding: 2.5em 1em;
+
+        figure {
+            padding: 1.5em .5em;
+            margin: .25em;
+            width: 10em;
+
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+
+            h2 {
+                margin: .5em 0;
+            }
+
+            i {
+                margin: 0;
+            }
+
+            figcaption {
+                font-size: .8em;
+                margin: .5em;
+            }
+
+            h4 {
+                margin: .25em;
             }
         }
+    }
+    
+    button {
+        display: none;
     }
 
 }
@@ -84,8 +155,11 @@ MEDIA QUERIES
        content: "Desktop Size";
   }
     
-    #homepage h1 {
-        padding: 2em;
+    body {
+        
+        #homepage h1 {
+            padding: 2em;
+        }
     }
 
 }
