@@ -134,21 +134,22 @@ var background = function (weather) {
 // Click Function Calls
 // Get and store Geo Location lat/long coordinates
 if ('geolocation' in navigator) {
-    $('.geo').click( function() {
-      
-        //load weather using your lat/long coordinates
-        navigator.geolocation.getCurrentPosition(function(position) {
+    
+    //load weather using your lat/long coordinates
+    navigator.geolocation.getCurrentPosition(function(position) {
 
-            // Check lat/long coordinates
-            var lat = position.coords.latitude;
-            var long = position.coords.longitude;
+        // Check lat/long coordinates
+        var lat = position.coords.latitude;
+        var long = position.coords.longitude;
 
-            console.log(lat, long);
+        console.log(lat, long);
+        
+        $('.geo').click( function() {
             $('#homepage').hide();
 
             // Send to SimpleWeather
             getWeather( lat + ',' + long );
-            $('#close').trigger('click'); 
+            $('#close').trigger('click');
         });
     });
 } else {
