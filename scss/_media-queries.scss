@@ -30,8 +30,12 @@ MEDIA QUERIES
             }
         }
         
-        figure i {
-            font-size: 3em;
+        figure {
+            margin: .5em auto;
+            
+            i {
+                font-size: 3em;
+            }
         }
         
         #show-sidr {
@@ -50,6 +54,7 @@ MEDIA QUERIES
     
     section {
         display: none;
+        max-width: 100%;
     }
     
     .showforecast {
@@ -77,12 +82,19 @@ MEDIA QUERIES
         #sidr a {
             font-size: 1.25em;
         }
+    
+        figure {
+            margin: .5em .25em;
+
+            i {
+                font-size: 4em;
+            }
+        }
         
         main {
             display: flex;
             flex-flow: column;
             align-items: center;
-            margin-top: 2em;
 
             div {
                 .temperature {
@@ -97,10 +109,6 @@ MEDIA QUERIES
         }
     }
     
-    figure i {
-        font-size: 4em;
-    }
-    
     .showforecast {
         display: none;
     }
@@ -109,35 +117,9 @@ MEDIA QUERIES
         display: flex;
         flex-flow: wrap;
         justify-content: center;
+        width: 90%;
         
-        padding: 2.5em 1em;
-
-        figure {
-            padding: 1.5em .5em;
-            margin: .25em;
-            width: 10em;
-
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-
-            h2 {
-                margin: .5em 0;
-            }
-
-            i {
-                margin: 0;
-            }
-
-            figcaption {
-                font-size: .8em;
-                margin: .5em;
-            }
-
-            h4 {
-                margin: .25em;
-            }
-        }
+        padding: 2.5em .5em;
     }
     
     button {
@@ -154,12 +136,5 @@ MEDIA QUERIES
        background: yellow;
        content: "Desktop Size";
   }
-    
-    body {
-        
-        #homepage h1 {
-            padding: 2em;
-        }
-    }
 
 }
